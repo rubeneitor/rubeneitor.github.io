@@ -13,6 +13,26 @@
 </head>
 
 <body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Clasificacion <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="info.html">Calendario (proximamente)</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Disabled</a>
+        </li> -->
+      </ul>
+    
+    </div>
+  </nav>
   <h1 class="text-center mb-4" style="color: crimson;">Liga Domingos Pádel - Verduritas -</h1>
   <h4 class="text-center"><i><b>Tabla en desarrollo. Actualizada a día 21/04/2024</b></i></h4>
   <h6></h6>
@@ -23,19 +43,23 @@
   <div class="row col-lg-12 justify-content-center m-0">
    
     <div class="table-responsive col-lg-11">
+      <input class="form-control" id="myInput" type="text" placeholder="Buscar..">
       <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">Pos.</th>
             <th scope="col">Jugador</th>
-            <th scope="col">P. Jugados</th>
-            <th scope="col">P. Ganados</th>
-            <th scope="col">P. Empatados</th>
-            <th scope="col">P. Perdidos</th>
-            <th scope="col">Puntos</th>
+            <th scope="col">Jugados</th>
+            <th scope="col">Ganados</th>
+            <th scope="col">Empatados</th>
+            <th scope="col">Perdidos</th>
+            <th scope="col">P. Favor</th>
+            <th scope="col">P. Contra</th>
+            <th scope="col">Dif. Puntos</th>
+            <th scope="col">Puntos Totales</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="myTable">
           <tr>
             <th scope="row">1</th>
             <td> Toni </td>
@@ -43,245 +67,352 @@
             <td> 15 </td>
             <td> 1 </td>
             <td> 2 </td>
+            <td>275</td>
+            <td>185</td>
+            <td>90</td>
             <td> 31 </td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td> Fer </td>
-            <td> 18 </td>
-            <td> 12 </td>
-            <td> 0 </td>
-            <td> 5 </td>
-            <td> 24 </td>
+            <td> Martin </td>
+            <td> 25 </td>
+            <td> 17 </td>
+            <td> 2 </td>
+            <td> 6 </td>
+            <td> 365 </td>
+            <td> 283 </td>
+            <td> 82 </td>
+            <td> 36 </td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td> Fatima </td>
-            <td> 18 </td>
-            <td> 11 </td>
-            <td> 0 </td>
-            <td> 7 </td>
-            <td> 22 </td>
+            <td> Fer </td>
+            <td> 25 </td>
+            <td> 17 </td>
+            <td> 1 </td>
+            <td> 6 </td>
+            <td> 375 </td>
+            <td> 272 </td>
+            <td> 103 </td>
+            <td> 35 </td>
           </tr>
           <tr>
             <th scope="row">4</th>
-            <td> Martin </td>
+            <td> Juan </td>
             <td> 18 </td>
-            <td> 10 </td>
+            <td> 11 </td>
             <td> 2 </td>
-            <td> 6 </td>
-            <td> 22 </td>
+            <td> 5 </td>
+            <td> 267 </td>
+            <td> 211 </td>
+            <td> 56 </td>
+            <td> 24 </td>
           </tr>
           <tr>
             <th scope="row">5</th>
-            <td> Ruben </td>
-            <td> 18 </td>
-            <td> 7 </td>
+            <td> Fatima </td>
+            <td> 25 </td>
+            <td> 13 </td>
+            <td> 0 </td>
+            <td> 12 </td>
+            <td> 290 </td>
+            <td> 289 </td>
             <td> 1 </td>
-            <td> 10 </td>
-            <td> 15 </td>
+            <td> 26 </td>
           </tr>
           <tr>
             <th scope="row">6</th>
-            <td> Juan </td>
-            <td> 11 </td>
-            <td> 7 </td>
+            <td> Ruben </td>
+            <td> 25 </td>
+            <td> 8 </td>
             <td> 1 </td>
-            <td> 3 </td>
-            <td> 15 </td>
+            <td> 16 </td>
+            <td> 275 </td>
+            <td> 355 </td>
+            <td> -80 </td>
+            <td> 17 </td>
           </tr>
           <tr>
             <th scope="row">7</th>
-            <td> Emilio </td>
-            <td> 12 </td>
-            <td> 7 </td>
-            <td> 0 </td> 
-            <td> 5 </td> 
-            <td> 14 </td>
+            <td> Ines </td>
+            <td> 20 </td>
+            <td> 4 </td>
+            <td> 2 </td> 
+            <td> 14 </td> 
+            <td> 192 </td>
+            <td> 265 </td>
+            <td> -73 </td>
+            <td> 10 </td>
           </tr>
           <tr>
             <th scope="row">8</th>
+            <td> Adrian </td>
+            <td> 20 </td>
+            <td> 4 </td>
+            <td> 0 </td> 
+            <td> 16 </td> 
+            <td> 190 </td>
+            <td> 277 </td>
+            <td> -87 </td>
+            <td> 8 </td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td> Alber. G </td>
+            <td> 13 </td>
+            <td> 8 </td>
+            <td> 1 </td>
+            <td> 4 </td>
+            <td> 164 </td>
+            <td> 161 </td>
+            <td> 3 </td>
+            <td> 17 </td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td> Emilio </td>
+            <td> 12 </td>
+            <td> 7 </td>
+            <td> 0 </td>
+            <td> 5 </td>
+            <td> 154 </td>
+            <td> 148 </td>
+            <td> 6 </td>
+            <td> 14 </td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td> Marina </td>
+            <td> 12 </td>
+            <td> 7 </td>
+            <td> 0 </td>
+            <td> 5 </td>
+            <td> 168 </td>
+            <td> 175 </td>
+            <td> -7 </td> 
+            <td> 14 </td> 
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td> Ivan </td>
+            <td> 12 </td>
+            <td> 7 </td>
+            <td> 0 </td>
+            <td> 5 </td>
+            <td> 168 </td>
+            <td> 175 </td>
+            <td> -7 </td>
+            <td> 14 </td>
+          </tr>
+          <tr>
+            <th scope="row">13</th>
             <td> Susi </td>
             <td> 6 </td>
             <td> 6 </td>
             <td> 0 </td>
             <td> 0 </td>
+            <td> 85 </td>
+            <td> 52 </td>
+            <td> 33 </td>
             <td> 12 </td>
           </tr>
           <tr>
-            <th scope="row">9</th>
+            <th scope="row">14</th>
+            <td> Ruth </td>
+            <td> 12 </td>
+            <td> 5 </td>
+            <td> 2 </td>
+            <td> 5 </td>
+            <td> 182 </td>
+            <td> 159 </td>
+            <td> 23 </td>
+            <td> 12 </td>
+          </tr>
+          <tr>
+            <th scope="row">15</th>
+            <td> Wilson </td>
+            <td> 7 </td>
+            <td> 5 </td>
+            <td> 1 </td>
+            <td> 1 </td>
+            <td> 101 </td>
+            <td> 77 </td>
+            <td> 24 </td>
+            <td> 11 </td>
+          </tr>
+          <tr>
+            <th scope="row">16</th>
             <td> Ester </td>
             <td> 7 </td>
             <td> 5 </td>
             <td> 0 </td>
             <td> 2 </td>
+            <td> 74 </td>
+            <td> 67 </td>
+            <td> 7 </td>
             <td> 10 </td>
           </tr>
           <tr>
-            <th scope="row">10</th>
+            <th scope="row">17</th>
             <td> Ana </td>
             <td> 12 </td>
             <td> 4 </td>
             <td> 1 </td>
             <td> 7 </td>
+            <td> 149 </td>
+            <td> 150 </td>
+            <td> -1 </td>
             <td> 9 </td>
           </tr>
           <tr>
-            <th scope="row">11</th>
+            <th scope="row">18</th>
             <td> Monica </td>
             <td> 7 </td>
             <td> 4 </td>
             <td> 0 </td>
             <td> 3 </td>
+            <td> 70 </td>
+            <td> 73 </td>
+            <td> -3 </td>
             <td> 8 </td>
           </tr>
           <tr>
-            <th scope="row">12</th>
+            <th scope="row">19</th>
             <td> Sole G </td>
             <td> 7 </td>
             <td> 4 </td>
             <td> 0 </td>
             <td> 3 </td>
+            <td> 70 </td>
+            <td> 73 </td>
+            <td> -3 </td>
             <td> 8 </td>
           </tr>
           <tr>
-            <th scope="row">13</th>
-            <td> Ines </td>
-            <td> 13 </td>
+            <th scope="row">20</th>
+            <td> Ana N </td>
+            <td> 12 </td>
             <td> 3 </td>
-            <td> 1 </td>
-            <td> 9 </td>
+            <td> 2 </td>
             <td> 7 </td>
-          </tr>
+            <td> 162 </td>
+            <td> 173 </td>
+            <td> -11 </td>
+            <td> 8 </td>
+          </tr>                     
           <tr>
-            <th scope="row">14</th>
-            <td> Marina </td>
-            <td> 5 </td>
-            <td> 3 </td>
-            <td> 0 </td>
-            <td> 2 </td>
-            <td> 6 </td>
-          </tr>
-          <tr>
-            <th scope="row">15</th>
-            <td> Ivan </td>
-            <td> 5 </td>
-            <td> 3 </td>
-            <td> 0 </td>
-            <td> 2 </td>
-            <td> 6 </td>
-          </tr>
-          <tr>
-            <th scope="row">16</th>
+            <th scope="row">21</th>
             <td> Guille </td>
             <td> 6 </td>
             <td> 2 </td>
             <td> 2 </td>
             <td> 2 </td>
+            <td> 74 </td>
+            <td> 68 </td>
+            <td> 6 </td>
             <td> 6 </td>
           </tr>
           <tr>
-            <th scope="row">17</th>
+            <th scope="row">22</th>
             <td> Gabi </td>
             <td> 6 </td>
             <td> 2 </td>
             <td> 2 </td>
             <td> 2 </td>
+            <td> 74 </td>
+            <td> 68 </td>
+            <td> 6 </td>
             <td> 6 </td>
           </tr>
           <tr>
-            <th scope="row">18</th>
+            <th scope="row">23</th>
             <td> David </td>
             <td> 6 </td>
             <td> 3 </td>
             <td> 0 </td>
             <td> 3 </td>
+            <td> 71 </td>
+            <td> 65 </td>
+            <td> 6 </td>
             <td> 6 </td>
           </tr>
           <tr>
-            <th scope="row">19</th>
-            <td> Adrian </td>
-            <td> 13 </td>
-            <td> 3 </td>
-            <td> 0 </td>
-            <td> 10 </td>
-            <td> 6 </td>
-          </tr>
+            <th scope="row">24</th>
+            <td> Amaya </td>
+            <td> 7 </td>
+            <td> 2 </td>
+            <td> 1 </td>
+            <td> 4 </td>
+            <td> 84 </td>
+            <td> 86 </td>
+            <td> -2 </td>
+            <td> 5 </td>
+          </tr>        
           <tr>
-            <th scope="row">20</th>
+            <th scope="row">25</th>
             <td> Gema </td>
             <td> 7 </td>
             <td> 2 </td>
             <td> 0 </td>
             <td> 5 </td>
+            <td> 70 </td>
+            <td> 70 </td>
+            <td> 0 </td>
             <td> 4 </td>
           </tr>
           <tr>
-            <th scope="row">21</th>
+            <th scope="row">26</th>
             <td> Maria </td>
             <td> 7 </td>
             <td> 2 </td>
             <td> 0 </td>
             <td> 5 </td>
+            <td> 69 </td>
+            <td> 74 </td>
+            <td> -5 </td>
             <td> 4 </td>
           </tr>
           <tr>
-            <th scope="row">22</th>
+            <th scope="row">27</th>
             <td> Laura </td>
             <td> 7 </td>
             <td> 2 </td>
             <td> 0 </td>
             <td> 5 </td>
+            <td> 69 </td>
+            <td> 74 </td>
+            <td> -5 </td>
             <td> 4 </td>
           </tr>
           <tr>
-            <th scope="row">23</th>
-            <td> Ruth </td>
+            <th scope="row">28</th>
+            <td> Ana G </td>
+            <td> 7 </td>
+            <td> 2 </td>
+            <td> 0 </td>
             <td> 5 </td>
-            <td> 1 </td>
-            <td> 1 </td>
-            <td> 3 </td>
-            <td> 3 </td>
-          </tr>
+            <td> 53 </td>
+            <td> 88 </td>
+            <td> -35 </td>
+            <td> 4 </td>
+          </tr>          
           <tr>
-            <th scope="row">24</th>
-            <td> Ana N </td>
-            <td> 5 </td>
-            <td> 1 </td>
-            <td> 1 </td>
-            <td> 3 </td>
-            <td> 3 </td>
-          </tr>
-          <tr>
-            <th scope="row">25</th>
+            <th scope="row">29</th>
             <td> Paula </td>
             <td> 6 </td>
             <td> 1 </td>
             <td> 1 </td>
             <td> 4 </td>
+            <td> 52 </td>
+            <td> 95 </td>
+            <td> -43 </td>
             <td> 3 </td>
-          </tr>
-          <tr>
-            <th scope="row">26</th>
-            <td> Alberto </td>
-            <td> 6 </td>
-            <td> 1 </td>
-            <td> 1 </td>
-            <td> 4 </td>
-            <td> 3 </td>
-          </tr>
-          <tr>
-            <th scope="row">27</th>
-            <td> Sole C </td>
-            <td> 7 </td>
-            <td> 1 </td>
-            <td> 0 </td>
-            <td> 6 </td>
-            <td> 2 </td>
           </tr>
         </tbody>
       </table>
+      
     </div>
+    
 
   </div>
 
@@ -295,6 +426,16 @@
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
 </body>
 
 </html>
